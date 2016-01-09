@@ -1,12 +1,7 @@
-nav.site-nav role="navigation"
-  - link_to 'https://github.com/dnajd/middleman-loaded', class: 'navbar-brand', target: '_blank' do
-    i.fa.fa-flask
-  .nav-links
-    - link_to "#{site_url}/" do
-      i.fa.fa-star
-      | Home
-    - link_to "#{site_url}/docs/" do
-      i.fa.fa-eye
-      | Docs
-  .mobile-menu
-    i.fa.fa-navicon
+header id="header" class="skel-layers-fixed"
+  nav#nav
+    ul
+      li
+        = link_to "Главная", "#{site_url}", class: "site-title"
+      li
+        = link_to "Главная", "#{site_url}", class: "page-link"

@@ -11,9 +11,9 @@ html
     = stylesheet_link_tag "application"
     / = javascript_include_tag "vendor/"
 
-  body
-    header.container = partial "_layouts/header"
+  body#top
+    / header.container = partial "_layouts/header"
     main.container = yield
-    footer.container = partial "_layouts/footer"
+    / footer.container = partial "_layouts/footer"
     = javascript_include_tag  "application"
 

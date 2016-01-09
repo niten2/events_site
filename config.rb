@@ -22,13 +22,21 @@ set :fonts_dir, 'assets/fonts'
 set :data_dir, 'source/data'
 set :helpers_dir, 'lib/helpers'
 
-set :partials_dir, '_partials'
+set :partials_dir, 'partials'
 set :layouts_dir,  '_layouts'
+
+
+# images_dir = 'assets/images'
+# set :images_dir, images_dir
 
 after_configuration do
   @bower_config = JSON.parse(IO.read("#{root}/.bowerrc"))
   sprockets.append_path File.join "#{root}", @bower_config["directory"]
+  # sprockets.import_asset('/bxslider-4/dist/images/controls.png') {|p| "#{images_dir}/controls.png"}
 end
+
+
+
 
 ignore '.idea/*'
 

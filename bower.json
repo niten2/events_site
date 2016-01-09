@@ -15,5 +15,9 @@
     "vendor/assets/bower",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "bxslider-4": "~4.2.5",
+    "jquery": "~2.2.0"
+  }
 }
