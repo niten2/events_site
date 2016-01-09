@@ -1,10 +1,4 @@
-#
-#
-# -------------------------------------------------------------------
-# EXTENSIONS
-# -------------------------------------------------------------------
-
-# custom
+require 'slim'
 require 'lib/extensions/custom_urls.rb'
 activate :custom_urls
 
@@ -12,11 +6,45 @@ activate :custom_urls
 activate :livereload
 activate :directory_indexes
 activate :automatic_image_sizes
-activate :syntax # code highlighting
+activate :syntax
+activate :relative_assets
+activate :bower
 
-
+set :relative_links, true
 set :site_url, ""
+set :markdown
 
+set :css_dir, 'assets/stylesheets'
+set :js_dir, 'assets/javascripts'
+
+set :images_dir, 'assets/images'
+set :fonts_dir, 'assets/fonts'
+set :data_dir, 'source/data'
+set :helpers_dir, 'lib/helpers'
+
+set :partials_dir, '_partials'
+set :layouts_dir,  '_layouts'
+
+after_configuration do
+  @bower_config = JSON.parse(IO.read("#{root}/.bowerrc"))
+  sprockets.append_path File.join "#{root}", @bower_config["directory"]
+end
+
+ignore '.idea/*'
+
+configure :build do
+  set :site_url, "/test111"
+  activate :minify_css
+  activate :minify_javascript
+  activate :asset_hash
+  # activate :relative_assets
+  # activate :cache_buster
+end
+
+activate :deploy do |deploy|
+  deploy.method = :git
+  deploy.build_before = true
+end
 
 # github userpages deploy
 #activate :deploy do |deploy|
@@ -25,73 +53,3 @@ set :site_url, ""
   #deploy.branch   = "master"
   #deploy.remote   = "git@github.com:username/username.github.io.git"
 #end
-
-# github project pages deploy
-#activate :deploy do |deploy|
-#  deploy.method = :git
-#  deploy.build_before = true # default: false
-#end
-
-# markdown settings
-set :markdown
-
-# directories
-set :css_dir, 'assets/stylesheets'
-set :js_dir, 'assets/javascripts'
-set :images_dir, 'assets/images'
-set :fonts_dir, 'assets/fonts'
-set :data_dir, 'source/data'
-set :layouts_dir,  '_layouts'
-set :helpers_dir, 'lib/helpers'
-#set :partials_dir, '_partials'
-
-# -------------------------------------------------------------------
-# MISC
-# -------------------------------------------------------------------
-
-# _vendor support for Sprockets
-after_configuration do
-  sprockets.append_path File.join "#{root}", 'source/assets/_vendor'
-end
-
-# Ignore files/paths
-ignore '.idea/*'
-
-# -------------------------------------------------------------------
-# Build-specific config
-# -------------------------------------------------------------------
-
-configure :build do
-  activate :minify_css
-  activate :minify_javascript
-  # activate :relative_assets
-  # activate :cache_buster
-  activate :asset_hash
-  set :site_url, "/test111"
-  # Favicon generator
-  # https://github.com/follmann/middleman-favicon-maker
-=begin
-  activate :favicon_maker do |f|
-    f.template_dir  = File.join(root, 'source/assets/img')
-    f.output_dir    = File.join(root, 'build')
-    f.icons = {
-      "favicon.ico" => [
-        { icon: "favicon.ico", size: "32x32,16x16" },
-      ]
-    }
-  end
-=end
-  # Alt image path
-  # set :http_prefix, "/Content/images/"
-end
-
-# github project pages deploy
-activate :deploy do |deploy|
-  deploy.method = :git
-  deploy.build_before = true # default: false
-end
-
-activate :relative_assets
-set :relative_links, true
-
-

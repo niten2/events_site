@@ -16,3 +16,6 @@ gem 'wdm', '~> 0.1.0', :platforms => [:mswin, :mingw]
 
 gem "eventmachine", '1.0.8'
 
+gem 'slim'
+
+gem 'middleman-bower'
