@@ -14,6 +14,10 @@ activate :directory_indexes
 activate :automatic_image_sizes
 activate :syntax # code highlighting
 
+
+set :site_url, ""
+
+
 # github userpages deploy
 #activate :deploy do |deploy|
   #deploy.method = :git
@@ -63,7 +67,7 @@ configure :build do
   # activate :relative_assets
   # activate :cache_buster
   activate :asset_hash
-
+  set :site_url, "/test111"
   # Favicon generator
   # https://github.com/follmann/middleman-favicon-maker
 =begin
@@ -89,4 +93,5 @@ end
 
 activate :relative_assets
 set :relative_links, true
+
 
