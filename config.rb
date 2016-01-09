@@ -86,3 +86,7 @@ activate :deploy do |deploy|
   deploy.method = :git
   deploy.build_before = true # default: false
 end
+
+activate :relative_assets
+set :relative_links, true
+
