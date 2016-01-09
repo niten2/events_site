@@ -138,10 +138,10 @@ DEPENDENCIES
   bitters
   eventmachine (= 1.0.8)
   font-awesome-middleman
-  middleman (~> 3.2.2)
+  middleman
   middleman-deploy
-  middleman-favicon-maker (~> 3.5)
-  middleman-livereload (~> 3.1.0)
+  middleman-favicon-maker
+  middleman-livereload
   middleman-pry
   middleman-syntax
   rake
