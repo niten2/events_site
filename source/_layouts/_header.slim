@@ -1,7 +1,21 @@
-header id="header" class="skel-layers-fixed"
+header#header.skel-layers-fixed
   nav#nav
     ul
       li
-        = link_to "Главная", "#{site_url}", class: "site-title"
+        a href="/"  Home
       li
-        = link_to "Главная", "#{site_url}", class: "page-link"
+        a href=("/left-sidebar.html")  Left Sidebar
+      li
+        a href=("/right-sidebar.html")  Right Sidebar
+      li
+        a href=("/no-sidebar.html")  No Sidebar
+      li
+        / a href=("{{ site.baseurl }}/blog.html")  Blog
+      / | {% for page in site.pages %}
+      / | {% if page.title %}
+      li
+        / a.page-link href=("{{ page.url | prepend: site.baseurl }}"} {{ page.title })
+      / | {% endif %}
+      / | {% endfor %}
+      li
+        a.button.special href="#"  Sign Up

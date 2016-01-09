@@ -12,8 +12,9 @@ html
     / = javascript_include_tag "vendor/"
 
   body#top
-    / header.container = partial "_layouts/header"
+    header.container = partial "_layouts/header"
+    = partial "_layouts/banner"
     main.container = yield
-    / footer.container = partial "_layouts/footer"
+    footer.container = partial "_layouts/footer"
     = javascript_include_tag  "application"
 

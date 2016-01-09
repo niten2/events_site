@@ -22,8 +22,9 @@ set :fonts_dir, 'assets/fonts'
 set :data_dir, 'source/data'
 set :helpers_dir, 'lib/helpers'
 
-set :partials_dir, 'partials'
+set :partials_dir, '_partials'
 set :layouts_dir,  '_layouts'
+# set :layouts_dir,  'source/_layouts'
 
 
 # images_dir = 'assets/images'
