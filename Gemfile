@@ -19,5 +19,6 @@ gem "eventmachine", '1.0.8'
 gem 'slim'
 
 gem 'middleman-bower'
-gem "middleman-sprockets"
+
+# gem "middleman-sprockets"
 

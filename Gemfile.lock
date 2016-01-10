@@ -151,7 +151,6 @@ DEPENDENCIES
   middleman-favicon-maker
   middleman-livereload
   middleman-pry
-  middleman-sprockets
   middleman-syntax
   rake
   slim

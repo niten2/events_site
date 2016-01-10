@@ -3,7 +3,6 @@
 // = require_tree .
 
 $(document).ready(function(){
-  console.log("!!!")
 	$('.bxslider').bxSlider({
 		auto: true,
 		wrapperClass: "bx-wrapper",
@@ -11,6 +10,7 @@ $(document).ready(function(){
 		captions: true,
 		pagerCustom: '#bx-pager',
 		adaptiveHeight: true,
+		adaptiveWidth: true,
 		slideWidth: 900
   });
 });
