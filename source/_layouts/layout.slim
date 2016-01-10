@@ -6,15 +6,13 @@ html
     meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"
     meta content="width=device-width" name="viewport"
     title = current_page.data.title || "Events"
-    / = yield_content :css
-    / = yield_content :js
     = stylesheet_link_tag "application"
-    / = javascript_include_tag "vendor/"
 
   body#top
     header.container = partial "_layouts/header"
     = partial "_layouts/banner"
-    main.container = yield
+    / main.container = yield
+    = yield
     footer.container = partial "_layouts/footer"
     = javascript_include_tag  "application"
 
