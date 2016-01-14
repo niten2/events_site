@@ -59,3 +59,16 @@
       = image_tag "28.jpg"
     li
       = image_tag "29.jpg"
+
+
+/ #vk_comments
+/   javascript:
+/     VK.Widgets.Comments('vk_comments');
+script src="//vk.com/js/api/openapi.js" type="text/javascript"
+
+javascript:
+  VK.init({apiId: 4628003, onlyWidgets: true});
+
+#vk_comments
+  javascript:
+    VK.Widgets.Comments("vk_comments", {limit: 10, width: "665", attach: "*"});
