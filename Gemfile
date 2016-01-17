@@ -1,5 +1,3 @@
-# If you have OpenSSL installed, we recommend updating
-# the following line to use 'https'
 source 'http://rubygems.org'
 
 gem 'rake'
@@ -21,4 +19,6 @@ gem 'slim'
 gem 'middleman-bower'
 
 # gem "middleman-sprockets"
+# gem 'sitemap_generator'
+# gem "builder"
 
