@@ -1065,9 +1065,9 @@
 		padding: 4em 0 6em 0;
 	}
 
-		#footer a {
-			color: inherit;
-		}
+		/* #footer a { */
+		/* 	color: inherit; */
+		/* } */
 
 		#footer .copyright {
 			color: #bbb;
