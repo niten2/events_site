@@ -1,16 +1,13 @@
 require 'slim'
 require 'lib/extensions/custom_urls.rb'
 activate :custom_urls
-
 # gems
 activate :livereload
 activate :directory_indexes
 activate :automatic_image_sizes
 activate :syntax
 activate :bower
-
 # activate :sitemap_generator
-
 
 activate :relative_assets
 set :relative_links, true
