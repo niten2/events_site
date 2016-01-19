@@ -7,9 +7,7 @@ html
     meta content="width=device-width" name="viewport"
     title Центр Событий
     = stylesheet_link_tag "application"
-
-  body#top
-    header.container = partial "_layouts/header"
+  body
     = partial "_layouts/banner"
     = yield
     footer = partial "_layouts/footer"

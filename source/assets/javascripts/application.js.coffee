@@ -1,4 +1,5 @@
 # = require jquery
+# = require Materialize
 # = require bxslider-4/dist/jquery.bxslider.js
 
 $(document).ready ->

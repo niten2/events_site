@@ -1,4 +1,5 @@
 // require bxslider-4/dist/jquery.bxslider.css
+//= require Materialize
 //= require_tree .
 
 .bx-wrapper img {
@@ -21,4 +22,8 @@
   font-weight: 600
 }
 
+.banner_block {
+  text-color: white;
+  padding-top: 390px;
+}
 
