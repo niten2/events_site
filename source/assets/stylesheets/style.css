@@ -974,11 +974,17 @@
 /* Banner */
 
 	#banner {
-    height: 626px;
+    /* height: 626px; */
+    height: 100%;
 		/* background-color: #666666; */
-		background-image: url("../images/logo.jpg");
+		/* background-image: url("../images/logo.jpg"); */
+
 		background-size: cover;
-		background-position: center center;
+
+		/* background-position: center top; */
+		background-position: top ;
+		/* background-position: center center; */
+
 		background-repeat: no-repeat;
 
 		text-align: center;

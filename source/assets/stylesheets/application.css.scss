@@ -1,6 +1,9 @@
-// require bxslider-4/dist/jquery.bxslider.css
 //= require Materialize
 //= require_tree .
+
+body {
+  font-family: GillSans, Calibri, Trebuchet, sans-serif;
+}
 
 .bx-wrapper img {
   margin: 0 auto; }
@@ -24,6 +27,9 @@
 
 .banner_block {
   text-color: white;
-  padding-top: 390px;
+  // position: absolute;
+  // padding-top: 390px;
+  // margin-bottom: 390px;
 }
 
+h2 { text-color: white;}
