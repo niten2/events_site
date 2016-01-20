@@ -19,3 +19,35 @@ $(document).ready ->
     top = $(id).offset().top
     $("body,html").animate scrollTop: top , 1500
 
+
+  # yandex metrika
+  ((d, w, c) ->
+    (w[c] = w[c] or []).push ->
+      try
+        w.yaCounter34798345 = new (Ya.Metrika)(
+          id: 34798345
+          clickmap: true
+          trackLinks: true
+          accurateTrackBounce: true
+          webvisor: true
+          trackHash: true)
+      catch e
+      return
+    n = d.getElementsByTagName('script')[0]
+    s = d.createElement('script')
+
+    f = ->
+      n.parentNode.insertBefore s, n
+      return
+
+    s.type = 'text/javascript'
+    s.async = true
+    s.src = 'https://mc.yandex.ru/metrika/watch.js'
+    if w.opera == '[object Opera]'
+      d.addEventListener 'DOMContentLoaded', f, false
+    else
+      f()
+    return
+  ) document, window, 'yandex_metrika_callbacks'
+
+
