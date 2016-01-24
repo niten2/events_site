@@ -33,3 +33,8 @@ body {
 }
 
 h2 { text-color: white;}
+
+.flexslider .slides > li {display: none; -webkit-backface-visibility: hidden;}
+.flexslider .slides img {width: 100%; display: block;}
+.flexslider .slides > li {display: none; -webkit-backface-visibility: hidden; background-color: #ffffff; text-align: center;}
+.flexslider .slides img {width: auto; display: inline;}
