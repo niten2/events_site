@@ -51,9 +51,10 @@
       / li
       /   = image_tag "14.jpg", class: "responsive-img"
 
-script src="//vk.com/js/api/openapi.js" type="text/javascript"
-javascript:
-  VK.init({apiId: 5234352, onlyWidgets: true});
-.center#vk_comments
+.col.s12
+  script src="//vk.com/js/api/openapi.js" type="text/javascript"
   javascript:
-    VK.Widgets.Comments("vk_comments", {limit: 15, width: "665", attach: "*"});
+    VK.init({apiId: 5234352, onlyWidgets: true});
+  .center#vk_comments
+    javascript:
+      VK.Widgets.Comments("vk_comments", {limit: 15, width: "665", attach: "*"});
