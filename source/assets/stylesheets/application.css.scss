@@ -34,7 +34,20 @@ body {
 
 h2 { text-color: white;}
 
-.flexslider .slides > li {display: none; -webkit-backface-visibility: hidden;}
-.flexslider .slides img {width: 100%; display: block;}
-.flexslider .slides > li {display: none; -webkit-backface-visibility: hidden; background-color: #ffffff; text-align: center;}
-.flexslider .slides img {width: auto; display: inline;}
+// .flexslider .slides > li {display: none; -webkit-backface-visibility: hidden;}
+// .flexslider .slides img {width: 100%; display: block;}
+// .flexslider .slides > li {display: none; -webkit-backface-visibility: hidden; background-color: #ffffff; text-align: center;}
+// .flexslider .slides img {width: auto; display: inline;}
+
+// .flexslider {
+//     width: 600px;
+//     height: 600px;
+// }
+
+.flexslider .slides img {
+  margin: auto;
+  max-width: 800px;
+  max-height: 800px;
+}
+
+
