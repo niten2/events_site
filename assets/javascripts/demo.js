@@ -1,0 +1,1 @@
+$(function(){var a=$(".toggle a"),e=$(".code");a.on("click",function(i){i.preventDefault();var s=$(this);s.hasClass("active")||(a.removeClass("active"),s.addClass("active"),e.hide().filter(this.hash).show())}),a.first().click()});
